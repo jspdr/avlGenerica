@@ -10,7 +10,7 @@ estoque.o: estoque/estoque.c
 	gcc -c estoque/estoque.c -o estoque.o
 
 biblioteca: main_biblioteca.o biblioteca.o avl.o
-	gcc -o prog_biblioteca main_biblioteca.o biblioteca.o avl.o
+	gcc -o executavelBiblioteca main_biblioteca.o biblioteca.o avl.o
 
 main_biblioteca.o: biblioteca/main.c
 	gcc -c biblioteca/main.c -o main_biblioteca.o
@@ -24,7 +24,7 @@ avl.o: AVL.c
 run_estoque: estoque
 	valgrind --leak-check=full ./executavelEstoque
 
-run_bilbioteca: biblioteca
+run_biblioteca: biblioteca
 	valgrind --leak-check=full ./executavelBiblioteca
 
 clean:

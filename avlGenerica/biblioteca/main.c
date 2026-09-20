@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "AVL.h"
+#include "../AVL.h"
 #include "biblioteca.h"
 
 int main () {
@@ -13,10 +13,11 @@ int main () {
     No *biblioteca = NULL, *buscaLivro = NULL;
     Livro *atual = NULL;
 
-    int opcao = 0, altura = 0;
+    int opcao = 0, altura = 1;
     
 
     do {
+        altura = 1;
         buscaLivro = NULL;
         atual = NULL;
 

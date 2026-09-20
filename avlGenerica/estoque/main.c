@@ -13,10 +13,11 @@ int main () {
     No *estoque = NULL, *buscaProduto = NULL;
     Produto *atual = NULL;
 
-    int opcao = 0, altura = 0;
+    int opcao = 0, altura = 1;
     
 
     do {
+        altura = 1;
         buscaProduto = NULL;
         atual = NULL;
 

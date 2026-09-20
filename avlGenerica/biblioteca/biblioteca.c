@@ -68,7 +68,7 @@ int comparaLivroCompleto(void *raiz, void *valor) {
         } else {
             if (tmpLivro->edicao > tmpEstoque->edicao) {
                 return 1;
-            } else if(tmpLivro->edicao < tmpEstoque->edicao) {
+            } else if (tmpLivro->edicao < tmpEstoque->edicao) {
                 return -1;
             } else {
                 return 0;

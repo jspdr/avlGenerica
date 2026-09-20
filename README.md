@@ -42,7 +42,7 @@ respectivos níveis (alturas) e de seus fatores de balanceamento.
 5. Encerrar Sistema: Finaliza a execução do programa, garantindo a liberação correta
 de toda a memória dinamicamente alocada.
 
-### Sistema 1: Biblioteca
+### Sistema 2: Biblioteca
 **1.1 - Descrição Geral:** esta aplicação tem por objetivo gerenciar o acervo e o histórico de empréstimos de livros de uma biblioteca, utilizando obrigatoriamente a biblioteca genérica da Árvore AVL (AVL.h). A estrutura será indexada por uma chave composta (Nome do Livro, Autor e Edição), que
 deve seguir estritamente os seguintes critérios hierárquicos de ordenação e desempate:
 1. Critério Principal: Nome do Livro (ordem alfabética, insensível a maiúsculas/minúsculas).

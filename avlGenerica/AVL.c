@@ -233,7 +233,7 @@ No *removeNoAVL(No *raiz, void *valor, int (*comparaDado) (void *, void *), void
                     *altura = 0;
                     break;
                 case -1:
-                    raiz = rotacionaEsquerda(raiz);
+                    raiz = rotacionaDireita(raiz);
                     *altura = 1;
                     break;
             }
@@ -252,7 +252,7 @@ No *removeNoAVL(No *raiz, void *valor, int (*comparaDado) (void *, void *), void
                     *altura = 0;
                     break;
                 case 1:
-                    raiz = rotacionaDireita(raiz);
+                    raiz = rotacionaEsquerda(raiz);
                     *altura = 1;
                     break;
             }
@@ -386,6 +386,7 @@ void imprimePorNiveis(No *raiz, void (*imprimeDado) (void *)) {
             tamProx++;
             filaAux = insereNoFila(filaAux, atual->direita);
         }
+
 
         if (tamAtual == 0) {
             printf(" Nível: %d\n", nivel);

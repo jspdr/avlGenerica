@@ -1,7 +1,6 @@
 #ifndef BIBLIOTECA_H
 #define BIBLIOTECA_H
 
-
 typedef struct data {
     int dia;
     int mes;
@@ -52,6 +51,17 @@ Pilha *insereNoPilha(Pilha *pilha, Data emprestimo, Data devolucao, char *locata
  * @param devolucao Instância do tipo Data, contendo três valores inteiros para a data de devolução.
  * @param pilha Ponteiro do tipo No para a Pilha como um todo.
  * @param valor Ponteiro do tipo void para um dado genérico.
+ */
+
+void liberaPilha(Pilha *pilha);
+/**
+ * @brief Remove toda a estrutura da Pilha.
+ * @param pilha Ponteiro do tipo No para a Pilha como um todo.
+ */
+
+Livro *criaLivro();
+/**
+ * @brief Aloca um nó de forma dinâmica uma instância composta de seis informações e um ponteiro para pilha.
  */
 
 int comparaLivroCompleto(void *raiz, void *valor);

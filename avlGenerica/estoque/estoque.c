@@ -17,7 +17,7 @@ int comparaProduto(void *raiz, void *valor) {
     Produto *tmpEstoque = (Produto *) raiz;
     Produto *tmpProduto = (Produto *) valor;
 
-    return tmpEstoque->codigoBarra - tmpProduto->codigoBarra;
+    return tmpProduto->codigoBarra - tmpEstoque->codigoBarra;
 }
 
 void imprimeExistencia(void *valor) {
