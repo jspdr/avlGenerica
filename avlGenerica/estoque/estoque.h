@@ -51,6 +51,13 @@ void liberaProduto(void *valor);
  * @param valor Ponteiro do tipo void para um dado genérico.
  */
 
+ void imprimeProdutoParcial(void *valor);
+/**
+ * @brief Assinatura da função callback "imprimeDado" do pacote AVL, responsável por imprimir apenas o código de barra,
+ * uso exclusivo para a impressão por níveis.
+ * @param valor Ponteiro do tipo void para um dado genérico.
+ */
+
 void imprimeProdutoCompleto(void *valor);
 /**
  * @brief Assinatura da função callback "imprimeDado" do pacote AVL, responsável por imprimir o dado do tipo Produto.

@@ -376,16 +376,16 @@ void imprimePorNiveis(No *raiz, void (*imprimeDado) (void *)) {
         printf(" Fator de balanceamento: %d |", atual->fb);
         
         
-        if (atual->direita != NULL) {
-            tamProx++;
-            filaAux = insereNoFila(filaAux, atual->direita);
-        }
 
         if (atual->esquerda != NULL) {
             tamProx++;
             filaAux = insereNoFila(filaAux, atual->esquerda);
         }
 
+        if (atual->direita != NULL) {
+            tamProx++;
+            filaAux = insereNoFila(filaAux, atual->direita);
+        }
 
         if (tamAtual == 0) {
             printf(" Nível: %d\n", nivel);

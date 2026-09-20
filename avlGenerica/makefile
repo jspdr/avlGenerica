@@ -1,25 +1,31 @@
 all: estoque biblioteca
 
-estoque: estoque.o AVL.o AVL.o
-	gcc -o estoque estoque.o AVL.o
+estoque: main_estoque.o estoque.o avl.o
+	gcc -o executavelEstoque main_estoque.o estoque.o avl.o
 
-estoque.o: estoque.c
-	gcc -c estoque.c -Wall -Wextra -std=c99
+main_estoque.o: estoque/main.c
+	gcc -c estoque/main.c -o main_estoque.o
 
-biblioteca: biblioteca.o AVL.o o
-	gcc -o biblioteca biblioteca.o AVL.o
+estoque.o: estoque/estoque.c
+	gcc -c estoque/estoque.c -o estoque.o
 
-biblioteca.o: biblioteca.c
-	gcc -c biblioteca.c -Wall -Wextra -std=c99
+biblioteca: main_biblioteca.o biblioteca.o avl.o
+	gcc -o prog_biblioteca main_biblioteca.o biblioteca.o avl.o
 
-AVL.o: AVL.c
-	gcc -c AVL.c -Wall -Wextra -std=c99
+main_biblioteca.o: biblioteca/main.c
+	gcc -c biblioteca/main.c -o main_biblioteca.o
+
+biblioteca.o: biblioteca/biblioteca.c
+	gcc -c biblioteca/biblioteca.c -o biblioteca.o
+
+avl.o: AVL.c
+	gcc -c AVL.c -o avl.o
 
 run_estoque: estoque
-	valgrind --leak-check=full ./estoque
+	valgrind --leak-check=full ./executavelEstoque
 
 run_bilbioteca: biblioteca
-	valgrind --leak-check=full ./biblioteca
+	valgrind --leak-check=full ./executavelBiblioteca
 
 clean:
-	rm -f *.o estoque biblioteca
+	rm -f *.o prog_estoque prog_biblioteca
